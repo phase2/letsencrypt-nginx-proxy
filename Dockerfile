@@ -28,6 +28,7 @@ RUN wget https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VER
 
 COPY etc /etc
 COPY ssl.tmpl /app/
+COPY nginx.tmpl /etc/docker-gen/templates/
 COPY createSSL.sh /
 RUN chmod +x /createSSL.sh
 COPY Procfile /app/Procfile
